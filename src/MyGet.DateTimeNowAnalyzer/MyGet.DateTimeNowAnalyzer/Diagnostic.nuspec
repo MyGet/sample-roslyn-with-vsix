@@ -9,7 +9,7 @@
     <licenseUrl>https://github.com/myget/sample-roslyn-with-vsix/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>https://github.com/myget/sample-roslyn-with-vsix</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
+    <description>Sample Roslyn analyzer and code fix with VSIX package. Scans for DateTime.Now and updates with DateTime.UtcNow.</description>
     <copyright>Copyright MyGet 2015</copyright>
     <tags>MyGet.DateTimeNowAnalyzer, analyzers</tags>
     <frameworkAssemblies>
