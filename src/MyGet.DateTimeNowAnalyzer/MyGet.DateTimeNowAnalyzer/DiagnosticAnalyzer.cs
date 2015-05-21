@@ -32,13 +32,22 @@ namespace MyGet.DateTimeNowAnalyzer
             if (identifierName != null)
             {
                 // Find usages of "DateTime.Now"
-                if (identifierName.Identifier.ValueText == "Now"
-                    && ((IdentifierNameSyntax)((MemberAccessExpressionSyntax)identifierName.Parent).Expression).Identifier.ValueText == "DateTime")
+                if (identifierName.Identifier.ValueText == "Now")
                 {
-                    // Produce a diagnostic.
-                    var diagnostic = Diagnostic.Create(Rule, identifierName.Identifier.GetLocation(), identifierName);
+                    var expression = ((MemberAccessExpressionSyntax)identifierName.Parent).Expression;
+                    var memberSymbol = context.SemanticModel.GetSymbolInfo(expression).Symbol;
 
-                    context.ReportDiagnostic(diagnostic);
+                    if (!memberSymbol?.ToString().StartsWith("System.DateTime") ?? true)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        // Produce a diagnostic.
+                        var diagnostic = Diagnostic.Create(Rule, identifierName.Identifier.GetLocation(), identifierName);
+
+                        context.ReportDiagnostic(diagnostic);
+                    }
                 }
             }
         }

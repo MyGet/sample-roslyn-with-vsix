@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="MyGet.DateTimeNowAnalyzer.Vsix..a1164bc1-873f-4a00-8271-3d0cd5b7280a" Version="1.0" Language="en-US" Publisher="Maarten"/>
+    <Identity Id="MyGet.DateTimeNowAnalyzer.Vsix..a1164bc1-873f-4a00-8271-3d0cd5b7280a" Version="1.1.0" Language="en-US" Publisher="Maarten"/>
     <DisplayName>MyGet.DateTimeNowAnalyzer.Vsix</DisplayName>
     <Description xml:space="preserve">Sample Roslyn analyzer and code fix with VSIX package. Scans for DateTime.Now and updates with DateTime.UtcNow.</Description>
     <MoreInfo>http://www.myget.org/vsix</MoreInfo>
